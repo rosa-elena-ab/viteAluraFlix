@@ -5,7 +5,7 @@ const BannerStyles = styled.section`
  
 
   @media (width > 768px) {
-    width: 100%;
+    
     height: auto;
     background-image: url("./img/banner.png");
     background-size: cover;
