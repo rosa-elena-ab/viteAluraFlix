@@ -1,42 +1,26 @@
 import styled from "styled-components";
 
 const BannerStyles = styled.section`
-    display:"none";
-     @media (width > 768px) {
-        width: 100%;
-        height: 600px;
-        position: absolute;
-        top: 129px;
-        left: 0;
-        background-image: url("./img/banner.png");
-        background-color: white;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-            
-    }
+  display:none;
+ 
+
+  @media (width > 768px) {
+    width: 100%;
+    height: auto;
+    background-image: url("./img/banner.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    padding: 200px 28px;
+    gap: 20px;
+  }
 `;
 
-const ImgDescription = styled.section`
-    @media (width < 768px) {
-        display: none;
-    }
-
-     @media (width > 768px) {
-        display: flex;
-        flex-direction: row-reverse;
-        align-items: center;
-        width: 100%;
-        height: 400px;
-        position: absolute;
-        top: 100px;
-        left: 0;
-
-     }
-
-`;
-
-const ImgStyles = styled.figure`
+const ImgContainerStyles = styled.figure`
  
 
   @media (width > 768px) {
@@ -49,15 +33,9 @@ const ImgStyles = styled.figure`
 `;
 
 
-const VideoImgStyles = styled.img`
-
-    @media (width > 768px) {
-        width: 100%;
-        border-radius: 20px;
-    }
- 
+const CourseImgStyles = styled.img`
+  width: 100%;
 `;
-
 const DescriptionContainer = styled.div`
     
   @media (width > 768px) {
@@ -84,19 +62,16 @@ const DescriptionStyles = styled.p`
 `;
 
 
-
 const Banner = () => {
   return (
     <BannerStyles>
-        <ImgDescription>
-        <ImgStyles>
-        <VideoImgStyles
+      <ImgContainerStyles>
+        <CourseImgStyles
           src="https://raw.githubusercontent.com/Diegodelias/challenge-one-aluraflix-latam/main/aluraflix/src/assets/thumbnails/bannerCard.png"
           alt=""
         />
-        </ImgStyles>
-        <DescriptionContainer>
-        
+      </ImgContainerStyles>
+      <DescriptionContainer>
         <div>
           <DescriptionTitle>Challenge React</DescriptionTitle>
           <DescriptionStyles>
@@ -106,10 +81,8 @@ const Banner = () => {
           </DescriptionStyles>
         </div>
       </DescriptionContainer>
-        </ImgDescription>
-       
     </BannerStyles>
   );
 };
 
-export default Banner
+export default Banner;

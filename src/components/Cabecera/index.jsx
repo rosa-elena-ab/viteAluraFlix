@@ -24,9 +24,7 @@ const HeaderEstilizado = styled.header`
   }
 `;
 
-const ShadowStyles = styled.div`
-
-
+const DivShadow = styled.div`
   @media (width > 768px) {
     width: 100%;
     height: 4px;
@@ -39,22 +37,10 @@ const ShadowStyles = styled.div`
 `;
 
 
-
-const ButtonContainer = styled.nav`
-  display: flex;
-  justify-content: space-evenly;
-  width: 100%;
-
-  @media (width > 768px) {
-    width: auto;
-    gap: 25px;
-  }
-`;
-
 const Cabecera = ({ logo }) => {
     
     return <HeaderEstilizado>
-        <ShadowStyles />
+        <DivShadow />
             <Link to="/">
                 <img src="./img/Logo.svg" alt="Logo Alura"/>
             </Link>
@@ -66,12 +52,8 @@ const Cabecera = ({ logo }) => {
                    Agregar
                 </CabeceraLink>
             </nav>
-        <ButtonContainer>
-        
-      </ButtonContainer>
+      
     </HeaderEstilizado>
 };
 
 export default Cabecera;
-
-

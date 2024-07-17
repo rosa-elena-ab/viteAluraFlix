@@ -1,12 +1,10 @@
 .formulario{
-    background-color: #0a031d;
+    background-color: #060114;
     display: flex;
     justify-content: center;
     display:"none";
     @media (width > 768px) {
        width: 100%;
-       position: absolute;
-       top: 729px;
        left: 0;
            
    }

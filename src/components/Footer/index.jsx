@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
 const ContainerFooter = styled.div`
-  position: absolute;
-  top:2000px;
   width:100%;
   padding: 2.5rem 3.5rem;
   background: rgba(0, 0, 0, 0.9);
